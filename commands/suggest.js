@@ -1,5 +1,12 @@
 // suggest.js
-const { SlashCommandBuilder, ActionRowBuilder, StringSelectMenuBuilder, ModalBuilder, TextInputBuilder, TextInputStyle } = require('discord.js');
+const { 
+    SlashCommandBuilder, 
+    ActionRowBuilder, 
+    StringSelectMenuBuilder, 
+    ModalBuilder, 
+    TextInputBuilder, 
+    TextInputStyle 
+} = require('discord.js');
 
 module.exports = {
     data: new SlashCommandBuilder()
@@ -57,7 +64,7 @@ module.exports = {
                 .setCustomId('description')
                 .setLabel('Description')
                 .setStyle(TextInputStyle.Paragraph)
-                .setMaxLength(1000)
+                .setMaxLength(4000)
                 .setRequired(true)
                 .setPlaceholder(`Describe your ${selectedCategory.toLowerCase()} suggestion in detail`);
 

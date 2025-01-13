@@ -47,7 +47,18 @@ module.exports = {
                 .setColor(config.acceptedColor)
                 .addFields({ name: 'Status', value: '✅ Accepted', inline: false });
 
-            await targetMessage.edit({ embeds: [embed] });
+            // Disable the buttons but keep them visible
+            const disabledComponents = targetMessage.components[0].components.map(button => {
+                return ButtonBuilder.from(button).setDisabled(true);
+            });
+
+            const row = new ActionRowBuilder().addComponents(disabledComponents);
+
+            await targetMessage.edit({ 
+                embeds: [embed],
+                components: [row]
+            });
+            
             await interaction.reply({ 
                 content: `Suggestion accepted in ${targetChannel}!`, 
                 ephemeral: true 
