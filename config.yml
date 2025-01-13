@@ -1,0 +1,24 @@
+token: "YOUR_TOKEN_HERE"
+clientId: "YOUR_CLIENT_ID"
+guildId: "YOUR_GUILD_ID"
+defaultColor: "#000000"
+staffRoleID: "STAFF_ROLE_ID" # A user requires this role to perform /accept or /deny
+suggestionID: "SUGGESTION_CHANNEL_ID" # Where suggestions will be posted
+upvoteEmoji: "👍" # The emojis of the upvote
+downvoteEmoji: "👎" # Emojis of the downvote
+deniedColor: "#FF0000" # The embed will change to this color if denied
+acceptedColor: "#00FF00" # The embed will change to this color if accepted
+
+categories:
+  - name: "Feature Request"
+    description: "Suggest a new feature or improvement."
+    emoji: "🚀"
+    channelId: "FEATURE_REQUEST_CHANNEL_ID"
+  - name: "Design Feedback"
+    description: "Provide feedback on UI/UX and visual elements."
+    emoji: "🎨"
+    channelId: "DESIGN_FEEDBACK_CHANNEL_ID"
+  - name: "Documentation"
+    description: "Suggest improvements for guides and documentation."
+    emoji: "📚"
+    channelId: "DOCUMENTATION_CHANNEL_ID"
